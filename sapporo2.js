@@ -10,7 +10,7 @@ window.addEventListener("load" , function (){
     tileLayer.addTo(map);
 
     // ローカルのGeoJSONを読込 //
-    const jsonData = "https://github.com/sanyuecangshu/sanyuecangshu.github.io/blob/main/sapporo.json";
+    const jsonData = "sapporo.json";
       
 
     // -- featuresを走査 -- // 
