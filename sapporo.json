@@ -1,0 +1,27 @@
+{
+    "type":"FeatureCollection",
+    "features":[
+        {
+            "type": "Feature",
+            "properties": {
+              "name": "cluster0-label0",
+              "icon": "icons/yokohama/cluster1-0.png"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [141.352188, 43.059086]
+            }
+        },
+        {
+             "type": "Feature",
+            "properties": {
+              "name": "cluster3-label0",
+              "icon": "icons/yokohama/cluster1-2.png"
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [141.353298, 43.060888]
+            }           
+        }
+    ]
+}

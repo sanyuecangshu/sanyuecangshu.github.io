@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>sapporo station pictorial map</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+
+
+    <link rel="stylesheet" type="text/css" href="./sub-style.css">
+    
+    <script src="/js/leaflet-0.7.2/leaflet.ajax.min.js"></script>
+
+</head>
+
+<body>
+    <h1 class="bg-primary text-white text-center">札幌駅</h1>
+    <main>
+        <div class="row mx-0">
+            <div class="col-sm-8">
+                <div id="mapid"></div> 
+            </div>
+
+
+        <div class="col-sm-4">
+            <div class="gallery" id="image-gallery-cluster0-label0">
+                <img src="sapporo photo_2stages/cluster0/sdbscan_0.3_0.05_5label0/label0all/3654989430.jpg"alt="cluster0-label0 image1">
+                <img src="sapporo photo_2stages/cluster0/sdbscan_0.3_0.05_5label0/label0all/8036320754.jpg"alt="cluster0-label0 image2">
+                <img src="sapporo photo_2stages/cluster0/sdbscan_0.3_0.05_5label0/label0all/6624519755.jpg"alt="cluster0-label0 image3">
+                <img src="sapporo photo_2stages/cluster0/sdbscan_0.3_0.05_5label0/label0all/6331761590.jpg"alt="cluster0-label0 image4">
+                <img src="sapporo photo_2stages/cluster0/sdbscan_0.3_0.05_5label0/label0all/4013785124.jpg"alt="cluster0-label0 image5">
+                <img src="sapporo photo_2stages/cluster0/sdbscan_0.3_0.05_5label0/label0all/3654989430.jpg"alt="cluster0-label0 image6">
+                <img src="sapporo photo_2stages/cluster0/sdbscan_0.3_0.05_5label0/label0all/2580884258.jpg"alt="cluster0-label0 image7">
+            </div>
+
+            <div class="gallery" id="image-gallery-cluster3-label0">
+                <img src="sapporo photo_2stages/cluster3/sdbscan_0.3_0.05_5label3/label0all/3108927854.jpg"alt="cluster3-label0 image1">
+                <img src="sapporo photo_2stages/cluster3/sdbscan_0.3_0.05_5label3/label0all/5218126126.jpg"alt="cluster3-label0 image2">
+                <img src="sapporo photo_2stages/cluster3/sdbscan_0.3_0.05_5label3/label0all/5175350791.jpg"alt="cluster3-label0 image3">
+                <img src="sapporo photo_2stages/cluster3/sdbscan_0.3_0.05_5label3/label0all/5462308854.jpg"alt="cluster3-label0 image4">
+                <img src="sapporo photo_2stages/cluster3/sdbscan_0.3_0.05_5label3/label0all/4221957480.jpg"alt="cluster3-label0 image5">
+            </div>
+
+        </div>
+    </div>
+    <script src="sapporo2.js"></script>
+    </main>
+</body>
+</html>

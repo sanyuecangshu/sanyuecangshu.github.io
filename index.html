@@ -1,140 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>sapporo station pictorial map</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-   crossorigin=""/>
-
+<meta charset="UTF-8">
+<title>index</title>
+<link rel="stylesheet" type="text/css" href="./reset.css">
+<link rel="stylesheet" type="text/css" href="./style.css">
 </head>
-
 <body>
-    <h1 class="bg-success text-white text-center">札幌駅</h1>
+    <header>
+        <div class="container">
+            <h1>ピクトリアルマップの例</h1>
+        </div>
+    </header>
     <main>
-        <div class="row mx-0">
-            <div class="col-sm-8">
-            
-
-        <div id="mapid" style="height: 800px;"></div>
-
-        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-    crossorigin=""></script>
-        <script>
-            var map = L.map('mapid').setView([43.06885651569661, 141.3508089420766], 13);
-            var tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-            });
-            tileLayer.addTo(map);
-
-            //. 表示する画像のパスとサイズ
-            var image = {
-            url: 'http://farm4.staticflickr.com/3353/3654989430_6b6b6a0148.jpg',
-            width: 60,
-            height: 60
-            };
-
-            //. 画像領域を地図に設定
-            var imageBounds = L.latLngBounds([[43.059086+0.0004, 141.352188+0.0004], [43.059086, 141.352188]]);
-            map.fitBounds( imageBounds );
-            map.setMaxBounds( imageBounds.pad( 0.5 ) );
-           
-            //. 画像をオーバーレイで設定
-            L.imageOverlay( image.url, imageBounds ).addTo(map);
-
-
-            //. 表示する画像のパスとサイズ
-            var image2 = {
-            url: 'http://farm9.staticflickr.com/8451/8036297832_79f4cd1dc2.jpg',
-            width: 60,
-            height: 60
-            };
-
-            //. 画像領域を地図に設定
-            var imageBounds2 = L.latLngBounds([[43.059011+0.0004, 141.352393+0.0004], [43.059011, 141.352393]]);
-            map.fitBounds( imageBounds2 );
-            map.setMaxBounds( imageBounds2.pad( 0.5 ) ); 
-            
-            //. 画像をオーバーレイで設定
-            L.imageOverlay( image2.url, imageBounds2 ).addTo(map);            
-
-            var features = [];
-            var place = [{
-                "name": "〒060-0061 北海道札幌市中央区南１条西４丁目１３−１ 日之出ビル",
-                "lat": "43.059086",
-                "long": "141.352188",
-                "url": "http://farm4.staticflickr.com/3353/3654989430_6b6b6a0148.jpg"
-            }, {
-                "name": "〒060-0061 北海道札幌市中央区南１条西４丁目 さっぽろ地下街ポールタウン店",
-                "lat": "43.059011",
-                "long": "141.352393",
-                "url": "http://farm9.staticflickr.com/8451/8036297832_79f4cd1dc2.jpg"
-            }, ]
-
-
-            // GeoJSON形式で複数個のマーカーを設定する
-            for (var i = 0; i < place.length; i++) {
-                features.push({ 
-                    "type": "Feature",
-                    "properties": {
-                    "name": place[i].name
-                    },
-                    "geometry": {
-                    "type": "Point",
-                    "coordinates": [place[i].long, place[i].lat]
-                    },
-                    "url": place[i].url
-                });
-            }
-            L.geoJson(features, {
-                onEachFeature: function(features, layer) {
-                    if (features.properties && features.properties.name) {
-                        layer.bindPopup(features.properties.name);
-                        layer.on('mouseover', function(e) {
-                            this.openPopup();
-                        });
-                        layer.on('mouseout', function(e) {
-                            this.closePopup();
-                        });
-                        layer.on('click', function(e) {
-                            alert(features.url);
-                        });
-                    }
-                }
-            }).addTo(map);
-        </script>  
+        <div class="container">
+            <ul id="menu">
+                <li><a href="./sapporomap.html">札幌駅のマップ</a></li>
+                <li><a href="./tenjinmap.html">天神駅のマップ</a></li>
+                <li><a href="./yokohamamap.html">横浜駅のマップ</a></li>
+            </ul>        
         </div>
-
-        <style>
-            .col-1 img {
-            max-width: 300px;
-            height: auto;
-            margin: 10px;
-            }
-        </style>
-
-
-        <div class="col-1">
-        <table>
-            <tr>
-                <td><img src="cluster0/sdbscan_0.3_0.05_5label0/label0all/3654989430.jpg" width="150"></td>
-                <td><img src="cluster0/sdbscan_0.3_0.05_5label0/label0all/8036320754.jpg" width="150"></td>               
-            </tr>
-            <tr>
-                <td><img src="cluster0/sdbscan_0.3_0.05_5label0/label0all/6624519755.jpg" width="150"></td>
-                <td><img src="cluster0/sdbscan_0.3_0.05_5label0/label0all/4013785124.jpg" width="150"></td>               
-            </tr>
-            <tr>
-                <td><img src="cluster0/sdbscan_0.3_0.05_5label0/label0all/6331761590.jpg" width="150"></td>
-                <td><img src="cluster0/sdbscan_0.3_0.05_5label0/label0all/13666639513.jpg" width="150"></td>               
-            </tr>
-        </table>
-        </div>
-    </div>
     </main>
+    <footer>
+    </footer>
 </body>
 </html>
