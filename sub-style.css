@@ -1,0 +1,18 @@
+#mapid {
+    height: 800px;
+}
+
+#image-gallery { 
+    width: 90%; 
+    margin: 0 auto;
+}
+
+.gallery img {
+    width: 200px; 
+    height: auto; 
+    justify-content:flex-start; 
+    margin-bottom: 10px;
+    margin-right: 10px;
+    flex-direction: row;
+    flex-wrap:wrap;   
+}
