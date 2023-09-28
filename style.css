@@ -1,0 +1,17 @@
+header {
+    border: 5px;
+    padding: 10px;
+    color: black;
+    background-color: lightblue;
+    font-size: 15pt;
+    }
+main {font-size: 15pt;}
+.container{
+    width: 200px;
+    margin: 0 auto;
+    white-space:nowrap;
+}
+#menu{
+    list-style-type: none;
+    padding: 10px;
+}
