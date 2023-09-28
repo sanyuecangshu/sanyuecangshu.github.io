@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>tenjin station pictorial map</title>
+    <link rel="stylesheet" type="text/css" href="./sub-style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+
+    <link rel="stylesheet" type="text/css" href="./sub-style.css">
+    <script src="/js/leaflet-0.7.2/leaflet.ajax.min.js"></script>
+</head>
+<body>
+    <h1 class="bg-success text-white text-center">天神駅</h1>
+    <main>
+        <div class="row mx-0">
+            <div class="col-sm-8">
+                <div id="mapid"></div>
+                
+            </div>
+
+            <div class="col-sm-4">
+                <div class="gallery" id="image-gallery-cluster4">
+                    <img src="tenjin photo_2stages/over0.16/cluster_4_all/8502283459.jpg"alt="cluster4 image1">
+                    <img src="tenjin photo_2stages/over0.16/cluster_4_all/5570977410.jpg"alt="cluster4 image2">
+                    <img src="tenjin photo_2stages/over0.16/cluster_4_all/13463309855.jpg"alt="cluster4 image3">
+                    <img src="tenjin photo_2stages/over0.16/cluster_4_all/7179654324.jpg"alt="cluster4 image4">
+                    <img src="tenjin photo_2stages/over0.16/cluster_4_all/9573650067.jpg"alt="cluster4 image5">
+                </div>
+                <div class="gallery" id="image-gallery-cluster35">
+                    <img src="tenjin photo_2stages/over0.16/cluster_35_all/5570490897.jpg"alt="cluster35 image1">
+                    <img src="tenjin photo_2stages/over0.16/cluster_35_all/8643873645.jpg"alt="cluster35 image2">
+                    <img src="tenjin photo_2stages/over0.16/cluster_35_all/8582857306.jpg"alt="cluster35 image3">
+                    <img src="tenjin photo_2stages/over0.16/cluster_35_all/8596817641.jpg"alt="cluster35 image4">
+                    <img src="tenjin photo_2stages/over0.16/cluster_35_all/10457902273.jpg"alt="cluster35 image5">
+                </div>
+                <div class="gallery" id="image-gallery-cluster59">
+                    <img src="tenjin photo_2stages/over0.16/cluster_59_all/3618647505.jpg"alt="cluster59 image1">
+                    <img src="tenjin photo_2stages/over0.16/cluster_59_all/7708480292.jpg"alt="cluster59 image2">
+                    <img src="tenjin photo_2stages/over0.16/cluster_59_all/1289539021.jpg"alt="cluster59 image3">
+                    <img src="tenjin photo_2stages/over0.16/cluster_59_all/8526970110.jpg"alt="cluster59 image4">
+                    <img src="tenjin photo_2stages/over0.16/cluster_59_all/4846572255.jpg"alt="cluster59 image5">
+                </div>
+                <div class="gallery" id="image-gallery-cluster6-label1">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster6/sdbscan_0.3_0.05_5label6/label1all/3401975140.jpg"alt="cluster6-label1 image1">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster6/sdbscan_0.3_0.05_5label6/label1all/4225337564.jpg"alt="cluster6-label1 image2">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster6/sdbscan_0.3_0.05_5label6/label1all/5580804571.jpg"alt="cluster6-label1 image3">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster6/sdbscan_0.3_0.05_5label6/label1all/9194242891.jpg"alt="cluster6-label1 image4">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster6/sdbscan_0.3_0.05_5label6/label1all/2475736628.jpg"alt="cluster6-label1 image5">
+                </div>
+                <div class="gallery" id="image-gallery-cluster6-label2">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster6/sdbscan_0.3_0.05_5label6/label2all/3300445090.jpg"alt="cluster6-label2 image1">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster6/sdbscan_0.3_0.05_5label6/label2all/8526634728.jpg"alt="cluster6-label2 image2">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster6/sdbscan_0.3_0.05_5label6/label2all/6791709630.jpg"alt="cluster6-label2 image3">
+                </div>
+                <div class="gallery" id="image-gallery-cluster6-label4">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster6/sdbscan_0.3_0.05_5label6/label4all/6791699632.jpg"alt="cluster6-label4 image1">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster6/sdbscan_0.3_0.05_5label6/label4all/3300446552.jpg"alt="cluster6-label4 image2">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster6/sdbscan_0.3_0.05_5label6/label4all/5719890711.jpg"alt="cluster6-label4 image3">
+                </div>
+                <div class="gallery" id="image-gallery-cluster10-label0">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster10/sdbscan_0.3_0.05_5label10/label0all/9293799840.jpg"alt="cluster10-label0 image1">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster10/sdbscan_0.3_0.05_5label10/label0all/3722460989.jpg"alt="cluster10-label0 image2">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster10/sdbscan_0.3_0.05_5label10/label0all/10370650285.jpg"alt="cluster10-label0 image3">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster10/sdbscan_0.3_0.05_5label10/label0all/2702909399.jpg"alt="cluster10-label0 image4">                </div>
+                <div class="gallery" id="image-gallery-cluster10-label1">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster10/sdbscan_0.3_0.05_5label10/label1all/9305508151.jpg"alt="cluster10-label1 image1">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster10/sdbscan_0.3_0.05_5label10/label1all/8241571604.jpg"alt="cluster10-label1 image2">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster10/sdbscan_0.3_0.05_5label10/label1all/9270182646.jpg"alt="cluster10-label1 image3">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster10/sdbscan_0.3_0.05_5label10/label1all/9482661700.jpg"alt="cluster10-label1 image4">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster10/sdbscan_0.3_0.05_5label10/label1all/12102149485.jpg"alt="cluster10-label1 image5">
+                </div>
+                <div class="gallery" id="image-gallery-cluster10-label4">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster10/sdbscan_0.3_0.05_5label10/label4all/10370655634.jpg"alt="cluster10-label4 image1">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster10/sdbscan_0.3_0.05_5label10/label4all/9292658322.jpg"alt="cluster10-label4 image2">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster10/sdbscan_0.3_0.05_5label10/label4all/7893641014.jpg"alt="cluster10-label4 image3">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster10/sdbscan_0.3_0.05_5label10/label4all/9482659776.jpg"alt="cluster10-label4 image4">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster10/sdbscan_0.3_0.05_5label10/label4all/8240500815.jpg"alt="cluster10-label4 image5">
+                </div>
+                <div class="gallery" id="image-gallery-cluster16-label0">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster16/sdbscan_0.3_0.05_5label16/label0all/10969809495.jpg"alt="cluster16-label0 image1">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster16/sdbscan_0.3_0.05_5label16/label0all/8217137736.jpg"alt="cluster16-label0 image2">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster16/sdbscan_0.3_0.05_5label16/label0all/6659319619.jpg"alt="cluster16-label0 image3">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster16/sdbscan_0.3_0.05_5label16/label0all/9249048227.jpg"alt="cluster16-label0 image4">
+                    <img src="tenjin photo_2stages/over0.16/sdbscan_0.3_0.05_5/cluster16/sdbscan_0.3_0.05_5label16/label0all/8240520587.jpg"alt="cluster16-label0 image5">
+                </div>
+            </div>
+        </div>
+        <script src="tenjin.js"></script>
+    </main>
+    
+</body>
+</html>

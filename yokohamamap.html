@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>yokohama station pictorial map</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+
+    <link rel="stylesheet" type="text/css" href="./sub-style.css">
+    <script src="/js/leaflet-0.7.2/leaflet.ajax.min.js"></script>
+</head>
+<body>
+    <h1 class="bg-info text-white text-center">横浜駅</h1>
+    <main>
+        <div class="row mx-0">
+            <div class="col-sm-8">
+                <div id="mapid"></div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="gallery" id="image-gallery-cluster1-label0">
+                    <img src="yokohama photo_2stages/cluster1/sdbscan_0.3_0.05_5label1/label0all/5407024951.jpg"alt="cluster1-label0 image1">
+                    <img src="yokohama photo_2stages/cluster1/sdbscan_0.3_0.05_5label1/label0all/9100862502.jpg"alt="cluster1-label0 image2">
+                    <img src="yokohama photo_2stages/cluster1/sdbscan_0.3_0.05_5label1/label0all/474035743.jpg"alt="cluster1-label0 image3">
+                    <img src="yokohama photo_2stages/cluster1/sdbscan_0.3_0.05_5label1/label0all/6981251604.jpg"alt="cluster1-label0 image4">
+                    <img src="yokohama photo_2stages/cluster1/sdbscan_0.3_0.05_5label1/label0all/5663803610.jpg"alt="cluster1-label0 image5">
+                </div>
+                <div class="gallery" id="image-gallery-cluster1-label2">
+                    <img src="yokohama photo_2stages/cluster1/sdbscan_0.3_0.05_5label1/label2all/2845266566.jpg"alt="cluster1-label2 image1">
+                    <img src="yokohama photo_2stages/cluster1/sdbscan_0.3_0.05_5label1/label2all/100055737.jpg"alt="cluster1-label2 image2">
+                    <img src="yokohama photo_2stages/cluster1/sdbscan_0.3_0.05_5label1/label2all/6925760311.jpg"alt="cluster1-label2 image3">
+                    <img src="yokohama photo_2stages/cluster1/sdbscan_0.3_0.05_5label1/label2all/3274545266.jpg"alt="cluster1-label2 image4">
+                    <img src="yokohama photo_2stages/cluster1/sdbscan_0.3_0.05_5label1/label2all/8429714518.jpg"alt="cluster1-label2 image5">
+                </div>
+                <div class="gallery" id="image-gallery-cluster6-label1">
+                    <img src="yokohama photo_2stages/cluster6/sdbscan_0.3_0.05_5label6/label1all/154259044.jpg"alt="cluster6-label1 image1">
+                    <img src="yokohama photo_2stages/cluster6/sdbscan_0.3_0.05_5label6/label1all/11488096015.jpg"alt="cluster6-label1 image2">
+                    <img src="yokohama photo_2stages/cluster6/sdbscan_0.3_0.05_5label6/label1all/7127808721.jpg"alt="cluster6-label1 image3">
+                    <img src="yokohama photo_2stages/cluster6/sdbscan_0.3_0.05_5label6/label1all/4528746136.jpg"alt="cluster6-label1 image4">
+                    <img src="yokohama photo_2stages/cluster6/sdbscan_0.3_0.05_5label6/label1all/2346107629.jpg"alt="cluster6-label1 image5">
+                </div>
+                <div class="gallery" id="image-gallery-cluster6-label2">
+                    <img src="yokohama photo_2stages/cluster6/sdbscan_0.3_0.05_5label6/label2all/4534595571.jpg"alt="cluster6-label2 image1">
+                    <img src="yokohama photo_2stages/cluster6/sdbscan_0.3_0.05_5label6/label2all/2584305731.jpg"alt="cluster6-label2 image2">
+                    <img src="yokohama photo_2stages/cluster6/sdbscan_0.3_0.05_5label6/label2all/3823258174.jpg"alt="cluster6-label2 image3">
+                    <img src="yokohama photo_2stages/cluster6/sdbscan_0.3_0.05_5label6/label2all/10704336493.jpg"alt="cluster6-label2 image4">
+                    <img src="yokohama photo_2stages/cluster6/sdbscan_0.3_0.05_5label6/label2all/3082685796.jpg"alt="cluster6-label2 image5">
+                </div>
+                <div class="gallery" id="image-gallery-cluster7-label1">
+                    <img src="yokohama photo_2stages/cluster7/sdbscan_0.3_0.05_5label7/label1all/12543750035.jpg"alt="cluster7-label1 image1">
+                    <img src="yokohama photo_2stages/cluster7/sdbscan_0.3_0.05_5label7/label1all/6979230639.jpg"alt="cluster7-label1 image2">
+                    <img src="yokohama photo_2stages/cluster7/sdbscan_0.3_0.05_5label7/label1all/12591247145.jpg"alt="cluster7-label1 image3">
+                    <img src="yokohama photo_2stages/cluster7/sdbscan_0.3_0.05_5label7/label1all/5007815329.jpg"alt="cluster7-label1 image4">
+                    <img src="yokohama photo_2stages/cluster7/sdbscan_0.3_0.05_5label7/label1all/5440887996.jpg"alt="cluster7-label1 image5">
+                </div>  
+                <div class="gallery" id="image-gallery-cluster7-label3">
+                    <img src="yokohama photo_2stages/cluster7/sdbscan_0.3_0.05_5label7/label3all/5008370316.jpg"alt="cluster7-label3 image1">
+                    <img src="yokohama photo_2stages/cluster7/sdbscan_0.3_0.05_5label7/label3all/12591297655.jpg"alt="cluster7-label3 image2">
+                    <img src="yokohama photo_2stages/cluster7/sdbscan_0.3_0.05_5label7/label3all/6979229105.jpg"alt="cluster7-label3 image3">
+                    <img src="yokohama photo_2stages/cluster7/sdbscan_0.3_0.05_5label7/label3all/8437247229.jpg"alt="cluster7-label3 image4">
+                    <img src="yokohama photo_2stages/cluster7/sdbscan_0.3_0.05_5label7/label3all/9967495483.jpg"alt="cluster7-label3 image5">
+                </div>   
+                <div class="gallery" id="image-gallery-cluster8-label0">
+                    <img src="yokohama photo_2stages/cluster8/sdbscan_0.3_0.05_5label8/label0all/9194172135.jpg"alt="cluster8-label0 image1">
+                    <img src="yokohama photo_2stages/cluster8/sdbscan_0.3_0.05_5label8/label0all/8598317260.jpg"alt="cluster8-label0 image2">
+                    <img src="yokohama photo_2stages/cluster8/sdbscan_0.3_0.05_5label8/label0all/5456554640.jpg"alt="cluster8-label0 image3">
+                    <img src="yokohama photo_2stages/cluster8/sdbscan_0.3_0.05_5label8/label0all/5846191733.jpg"alt="cluster8-label0 image4">
+                    <img src="yokohama photo_2stages/cluster8/sdbscan_0.3_0.05_5label8/label0all/5025783511.jpg"alt="cluster8-label0 image5">
+                </div>
+                <div class="gallery" id="image-gallery-cluster11-label0">
+                    <img src="yokohama photo_2stages/cluster11/sdbscan_0.3_0.05_5label11/label0all/5007600981.jpg"alt="cluster11-label0 image1">
+                    <img src="yokohama photo_2stages/cluster11/sdbscan_0.3_0.05_5label11/label0all/5857209640.jpg"alt="cluster11-label0 image2">
+                    <img src="yokohama photo_2stages/cluster11/sdbscan_0.3_0.05_5label11/label0all/3699104444.jpg"alt="cluster11-label0 image3">
+                    <img src="yokohama photo_2stages/cluster11/sdbscan_0.3_0.05_5label11/label0all/474026203.jpg"alt="cluster11-label0 image4">
+                    <img src="yokohama photo_2stages/cluster11/sdbscan_0.3_0.05_5label11/label0all/9035283703.jpg"alt="cluster11-label0 image5">
+                </div>   
+                <div class="gallery" id="image-gallery-cluster11-label1">
+                    <img src="yokohama photo_2stages/cluster11/sdbscan_0.3_0.05_5label11/label1all/2222909998.jpg"alt="cluster11-label1 image1">
+                    <img src="yokohama photo_2stages/cluster11/sdbscan_0.3_0.05_5label11/label1all/9443895541.jpg"alt="cluster11-label1 image2">
+                    <img src="yokohama photo_2stages/cluster11/sdbscan_0.3_0.05_5label11/label1all/609931256.jpg"alt="cluster11-label1 image3">
+                    <img src="yokohama photo_2stages/cluster11/sdbscan_0.3_0.05_5label11/label1all/6076020888.jpg"alt="cluster11-label1 image4">
+                    <img src="yokohama photo_2stages/cluster11/sdbscan_0.3_0.05_5label11/label1all/6969910757.jpg"alt="cluster11-label1 image5">
+                </div>
+                <div class="gallery" id="image-gallery-cluster14-label0">
+                    <img src="yokohama photo_2stages/cluster14/sdbscan_0.3_0.05_5label14/label0all/6411009997.jpg"alt="cluster14-label0 image1">
+                    <img src="yokohama photo_2stages/cluster14/sdbscan_0.3_0.05_5label14/label0all/8305488213.jpg"alt="cluster14-label0 image2">
+                    <img src="yokohama photo_2stages/cluster14/sdbscan_0.3_0.05_5label14/label0all/13895516701.jpg"alt="cluster14-label0 image3">
+                    <img src="yokohama photo_2stages/cluster14/sdbscan_0.3_0.05_5label14/label0all/10243542924.jpg"alt="cluster14-label0 image4">
+                    <img src="yokohama photo_2stages/cluster14/sdbscan_0.3_0.05_5label14/label0all/5582197757.jpg"alt="cluster14-label0 image5">
+                </div>  
+                <div class="gallery" id="image-gallery-cluster17-label1">
+                    <img src="yokohama photo_2stages/cluster17/sdbscan_0.3_0.05_5label17/label1all/6549569329.jpg"alt="cluster17-label1 image1">
+                    <img src="yokohama photo_2stages/cluster17/sdbscan_0.3_0.05_5label17/label1all/6301604277.jpg"alt="cluster17-label1 image2">
+                    <img src="yokohama photo_2stages/cluster17/sdbscan_0.3_0.05_5label17/label1all/10177293974.jpg"alt="cluster17-label1 image3">
+                    <img src="yokohama photo_2stages/cluster17/sdbscan_0.3_0.05_5label17/label1all/5629380496.jpg"alt="cluster17-label1 image4">
+                    <img src="yokohama photo_2stages/cluster17/sdbscan_0.3_0.05_5label17/label1all/6926008151.jpg"alt="cluster17-label1 image5">
+                </div>
+                <div class="gallery" id="image-gallery-cluster17-label3">
+                    <img src="yokohama photo_2stages/cluster17/sdbscan_0.3_0.05_5label17/label3all/1801506838.jpg"alt="cluster17-label3 image1">
+                    <img src="yokohama photo_2stages/cluster17/sdbscan_0.3_0.05_5label17/label3all/1309101021.jpg"alt="cluster17-label3 image2">
+                    <img src="yokohama photo_2stages/cluster17/sdbscan_0.3_0.05_5label17/label3all/12591746334.jpg"alt="cluster17-label3 image3">
+                    <img src="yokohama photo_2stages/cluster17/sdbscan_0.3_0.05_5label17/label3all/6951517317.jpg"alt="cluster17-label3 image4">
+                    <img src="yokohama photo_2stages/cluster17/sdbscan_0.3_0.05_5label17/label3all/6300239957.jpg"alt="cluster17-label3 image5">
+                </div>
+                <div class="gallery" id="image-gallery-cluster23-label0">
+                    <img src="yokohama photo_2stages/cluster23/sdbscan_0.3_0.05_5label23/label0all/6592148921.jpg"alt="cluster23-label0 image1">
+                    <img src="yokohama photo_2stages/cluster23/sdbscan_0.3_0.05_5label23/label0all/7158667570.jpg"alt="cluster23-label0 image2">
+                    <img src="yokohama photo_2stages/cluster23/sdbscan_0.3_0.05_5label23/label0all/1940282253.jpg"alt="cluster23-label0 image3">
+                    <img src="yokohama photo_2stages/cluster23/sdbscan_0.3_0.05_5label23/label0all/3005970669.jpg"alt="cluster23-label0 image4">
+                    <img src="yokohama photo_2stages/cluster23/sdbscan_0.3_0.05_5label23/label0all/8777221597.jpg"alt="cluster23-label0 image5">
+                </div>
+                <div class="gallery" id="image-gallery-cluster25-label0">
+                    <img src="yokohama photo_2stages/cluster25/sdbscan_0.3_0.05_5label25/label0all/7073937025.jpg"alt="cluster25-label0 image1">
+                    <img src="yokohama photo_2stages/cluster25/sdbscan_0.3_0.05_5label25/label0all/5234812622.jpg"alt="cluster25-label0 image2">
+                    <img src="yokohama photo_2stages/cluster25/sdbscan_0.3_0.05_5label25/label0all/6568630653.jpg"alt="cluster25-label0 image3">
+                    <img src="yokohama photo_2stages/cluster25/sdbscan_0.3_0.05_5label25/label0all/9447586426.jpg"alt="cluster25-label0 image4">
+                    <img src="yokohama photo_2stages/cluster25/sdbscan_0.3_0.05_5label25/label0all/476707651.jpg"alt="cluster25-label0 image5">
+                </div>
+                <div class="gallery" id="image-gallery-cluster30-label0">
+                    <img src="yokohama photo_2stages/cluster30/sdbscan_0.3_0.05_5label30/label0all/2928302851.jpg"alt="cluster30-label0 image1">
+                    <img src="yokohama photo_2stages/cluster30/sdbscan_0.3_0.05_5label30/label0all/2419142425.jpg"alt="cluster30-label0 image2">
+                    <img src="yokohama photo_2stages/cluster30/sdbscan_0.3_0.05_5label30/label0all/12591788474.jpg"alt="cluster30-label0 image3">
+                    <img src="yokohama photo_2stages/cluster30/sdbscan_0.3_0.05_5label30/label0all/8437447568.jpg"alt="cluster30-label0 image4">
+                    <img src="yokohama photo_2stages/cluster30/sdbscan_0.3_0.05_5label30/label0all/3805061370.jpg"alt="cluster30-label0 image5">
+                </div>
+                <div class="gallery" id="image-gallery-cluster30-label1">
+                    <img src="yokohama photo_2stages/cluster30/sdbscan_0.3_0.05_5label30/label1all/2419142399.jpg"alt="cluster30-label1 image1">
+                    <img src="yokohama photo_2stages/cluster30/sdbscan_0.3_0.05_5label30/label1all/3081829389.jpg"alt="cluster30-label1 image2">
+                    <img src="yokohama photo_2stages/cluster30/sdbscan_0.3_0.05_5label30/label1all/3734199396.jpg"alt="cluster30-label1 image3">
+                    <img src="yokohama photo_2stages/cluster30/sdbscan_0.3_0.05_5label30/label1all/10830800985.jpg"alt="cluster30-label1 image4">
+                    <img src="yokohama photo_2stages/cluster30/sdbscan_0.3_0.05_5label30/label1all/8232701865.jpg"alt="cluster30-label1 image5">
+                </div>
+                <div class="gallery" id="image-gallery-cluster35-label0">
+                    <img src="yokohama photo_2stages/cluster35/sdbscan_0.3_0.05_5label35/label0all/6921164042.jpg"alt="cluster35-label0 image1">
+                    <img src="yokohama photo_2stages/cluster35/sdbscan_0.3_0.05_5label35/label0all/4333920615.jpg"alt="cluster35-label0 image2">
+                    <img src="yokohama photo_2stages/cluster35/sdbscan_0.3_0.05_5label35/label0all/4102179215.jpg"alt="cluster35-label0 image3">
+                    <img src="yokohama photo_2stages/cluster35/sdbscan_0.3_0.05_5label35/label0all/5314824589.jpg"alt="cluster35-label0 image4">
+                    <img src="yokohama photo_2stages/cluster35/sdbscan_0.3_0.05_5label35/label0all/9257908575.jpg"alt="cluster35-label0 image5">
+                </div>
+                <div class="gallery" id="image-gallery-cluster45-label0">
+                    <img src="yokohama photo_2stages/cluster45/sdbscan_0.3_0.05_5label45/label0all/937539624.jpg"alt="cluster45-label0 image1">
+                    <img src="yokohama photo_2stages/cluster45/sdbscan_0.3_0.05_5label45/label0all/9462872466.jpg"alt="cluster45-label0 image2">
+                    <img src="yokohama photo_2stages/cluster45/sdbscan_0.3_0.05_5label45/label0all/474028056.jpg"alt="cluster45-label0 image3">
+                    <img src="yokohama photo_2stages/cluster45/sdbscan_0.3_0.05_5label45/label0all/4458439038.jpg"alt="cluster45-label0 image4">
+                    <img src="yokohama photo_2stages/cluster45/sdbscan_0.3_0.05_5label45/label0all/7753683816.jpg"alt="cluster45-label0 image5">
+                </div>
+                <div class="gallery" id="image-gallery-cluster48-label0">
+                    <img src="yokohama photo_2stages/cluster48/sdbscan_0.3_0.05_5label48/label0all/2970471831.jpg"alt="cluster48-label0 image1">
+                    <img src="yokohama photo_2stages/cluster48/sdbscan_0.3_0.05_5label48/label0all/6857075591.jpg"alt="cluster48-label0 image2">
+                    <img src="yokohama photo_2stages/cluster48/sdbscan_0.3_0.05_5label48/label0all/9669972811.jpg"alt="cluster48-label0 image3">
+                    <img src="yokohama photo_2stages/cluster48/sdbscan_0.3_0.05_5label48/label0all/3071222772.jpg"alt="cluster48-label0 image4">
+                    <img src="yokohama photo_2stages/cluster48/sdbscan_0.3_0.05_5label48/label0all/5025830527.jpg"alt="cluster48-label0 image5">
+                </div>
+            </div>            
+        </div>
+        <script src="yokohama.js"></script>
+    </main>
+</body>
+</html>
