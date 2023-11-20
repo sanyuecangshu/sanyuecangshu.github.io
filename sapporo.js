@@ -18,81 +18,161 @@ window.addEventListener("load" , function (){
         "icon":"icons/sapporo/cluster0-0.png",
         "lat": "43.059086",
         "long": "141.352188"
-    }, {
-        "name": "cluster3-label0",
-        "icon":"icons/sapporo/cluster3-0.png",
-        "lat": "43.060888",
-        "long": "141.353298"
     },{
-        "name": "cluster3-label3",
-        "icon":"icons/sapporo/cluster3-3.png",
-        "lat": "43.059883",
-        "long": "141.349636"        
+        "name": "cluster0-label1",
+        "icon":"icons/sapporo/cluster0-1.png",
+        "lat": "43.060814",
+        "long": "141.354089"
     },{
-        "name": "cluster3-label5",
-        "icon":"icons/sapporo/cluster3-5.png",
-        "lat": "43.061096",
-        "long": "141.35642"        
+        "name": "cluster0-label3",
+        "icon":"icons/sapporo/cluster0-3.png",
+        "lat": "43.059891",
+        "long": "141.34653"
     },{
-        "name": "cluster3-label6",
-        "icon":"icons/sapporo/cluster3-6.png",
-        "lat": "43.059999",
-        "long": "141.348166"  
+        "name": "cluster0-label7",
+        "icon":"icons/sapporo/cluster0-7.png",
+        "lat": "43.060833",
+        "long": "141.355833"
     },{
-        "name": "cluster3-label8",
-        "icon":"icons/sapporo/cluster3-8.png",
-        "lat": "43.060972",
-        "long": "141.35405"          
+        "name": "cluster0-label8",
+        "icon":"icons/sapporo/cluster0-8.png",
+        "lat": "43.058863",
+        "long": "141.338436"
     },{
-        "name": "cluster3-label12",
-        "icon":"icons/sapporo/cluster3-12.png",
+        "name": "cluster0-label11",
+        "icon":"icons/sapporo/cluster0-11.png",
+        "lat": "43.059711",
+        "long": "141.344719"
+    },{
+        "name": "cluster0-label23",
+        "icon":"icons/sapporo/cluster0-23.png",
+        "lat": "43.0592",
+        "long": "141.341591"
+    },{
+        "name": "cluster0-label27",
+        "icon":"icons/sapporo/cluster0-27.png",
+        "lat": "43.059",
+        "long": "141.340333"
+    },{
+        "name": "cluster0-label28",
+        "icon":"icons/sapporo/cluster0-28.png",
         "lat": "43.059555",
-        "long": "141.343152"         
+        "long": "141.343152"
     },{
-        "name": "cluster4-label1",
-        "icon":"icons/sapporo/cluster4-1.png",
-        "lat": "43.066716",
-        "long": "141.350763"        
+        "name": "cluster2-label1",
+        "icon":"icons/sapporo/cluster2-1.png",
+        "lat": "43.071333",
+        "long": "141.342833"
     },{
-        "name": "cluster6-label0",
-        "icon":"icons/sapporo/cluster6-0.png",
+        "name": "cluster2-label3",
+        "icon":"icons/sapporo/cluster2-3.png",
+        "lat": "43.070666",
+        "long": "141.343333"
+    },{
+        "name": "cluster5-label4",
+        "icon":"icons/sapporo/cluster5-4.png",
+        "lat": "43.068625",
+        "long": "141.350801"
+    },{
+        "name": "cluster5-label6",
+        "icon":"icons/sapporo/cluster5-6.png",
+        "lat": "43.068258",
+        "long": "141.35305"
+    },{
+        "name": "cluster5-label7",
+        "icon":"icons/sapporo/cluster5-7.png",
+        "lat": "43.068638",
+        "long": "141.350878"
+    },{
+        "name": "cluster5-label9",
+        "icon":"icons/sapporo/cluster5-9.png",
+        "lat": "43.066963",
+        "long": "141.350491"
+    },{
+        "name": "cluster5-label10",
+        "icon":"icons/sapporo/cluster5-10.png",
+        "lat": "43.066666",
+        "long": "141.350555"
+    },{
+        "name": "cluster5-label18",
+        "icon":"icons/sapporo/cluster5-18.png",
+        "lat": "43.066944",
+        "long": "141.349583"
+    },{
+        "name": "cluster5-label19",
+        "icon":"icons/sapporo/cluster5-19.png",
+        "lat": "43.068448",
+        "long": "141.352468"
+    },{
+        "name": "cluster5-label25",
+        "icon":"icons/sapporo/cluster5-25.png",
+        "lat": "43.068832",
+        "long": "141.35205"
+    },{
+        "name": "cluster5-label26",
+        "icon":"icons/sapporo/cluster5-26.png",
+        "lat": "43.066844",
+        "long": "141.351715"
+    },{
+        "name": "cluster9-label2",
+        "icon":"icons/sapporo/cluster9-2.png",
+        "lat": "43.063944",
+        "long": "141.347855"
+    },{
+        "name": "cluster9-label7",
+        "icon":"icons/sapporo/cluster9-7.png",
+        "lat": "43.064028",
+        "long": "141.348037"
+    },{
+        "name": "cluster10-label0",
+        "icon":"icons/sapporo/cluster10-0.png",
         "lat": "43.062587",
-        "long": "141.353537"         
+        "long": "141.353537"
     },{
-        "name": "cluster8-label0",
-        "icon":"icons/sapporo/cluster8-0.png",
-        "lat": "43.068699",
-        "long": "141.35044"        
+        "name": "cluster26-label2",
+        "icon":"icons/sapporo/cluster26-2.png",
+        "lat": "43.075611",
+        "long": "141.342722"
     },{
-        "name": "cluster8-label1",
-        "icon":"icons/sapporo/cluster8-1.png",
-        "lat": "43.06855",
-        "long": "141.349763"        
+        "name": "cluster27-label0",
+        "icon":"icons/sapporo/cluster27-0.png",
+        "lat": "43.055311",
+        "long": "141.353285"
     },{
-        "name": "cluster8-label2",
-        "icon":"icons/sapporo/cluster8-2.png",
-        "lat": "43.068809",
-        "long": "141.350709"         
+        "name": "cluster27-label2",
+        "icon":"icons/sapporo/cluster27-2.png",
+        "lat": "43.0545",
+        "long": "141.354"
     },{
-        "name": "cluster9-label1",
-        "icon":"icons/sapporo/cluster9-1.png",
-        "lat": "43.063969",
-        "long": "141.3479"          
+        "name": "cluster27-label5",
+        "icon":"icons/sapporo/cluster27-5.png",
+        "lat": "43.054726",
+        "long": "141.353523"
     },{
-        "name": "cluster9-label4",
-        "icon":"icons/sapporo/cluster9-4.png",
-        "lat": "43.063919",
-        "long": "141.350172"  
+        "name": "cluster33-label0",
+        "icon":"icons/sapporo/cluster33-0.png",
+        "lat": "43.056858",
+        "long": "141.351009"
     },{
-        "name": "cluster20-label0",
-        "icon":"icons/sapporo/cluster20-0.png",
-        "lat": "43.055721",
-        "long": "141.35324"        
+        "name": "cluster48-label2",
+        "icon":"icons/sapporo/cluster48-2.png",
+        "lat": "43.067166",
+        "long": "141.352666"
     },{
-        "name": "cluster31-label0",
-        "icon":"icons/sapporo/cluster31-0.png",
-        "lat": "43.068277",
-        "long": "141.352608"         
+        "name": "cluster53-label1",
+        "icon":"icons/sapporo/cluster53-1.png",
+        "lat": "43.065181",
+        "long": "141.362125"
+    },{
+        "name": "cluster57-label0",
+        "icon":"icons/sapporo/cluster57-0.png",
+        "lat": "43.057224",
+        "long": "141.35263"
+    },{
+        "name": "cluster57-label2",
+        "icon":"icons/sapporo/cluster57-2.png",
+        "lat": "43.057224",
+        "long": "141.35263"
     }];
     // GeoJSON形式で複数個のマーカーを設定する
     for (var i = 0; i < place.length; i++) {
