@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>sapporo station pictorial map</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+
+
+    <link rel="stylesheet" type="text/css" href="sub-style.css">
+    
+    <script src="/js/leaflet-0.7.2/leaflet.ajax.min.js"></script>
+
+</head>
+
+<body>
+    <h1 class="bg-primary text-white text-center">札幌駅</h1>
+    <main>
+        <div class="row mx-0">
+            <div class="col-sm-8">
+                <div id="mapid"></div> 
+            </div>
+
+
+        <div class="col-sm-4">
+            <div class="gallery" id="image-gallery-cluster0">
+                <img src="sapporo photo/cluster_0_top10/7905767458.jpg"alt="cluster0 image1">
+                <img src="sapporo photo/cluster_0_top10/8809554371.jpg"alt="cluster0 image2">
+                <img src="sapporo photo/cluster_0_top10/8036306303.jpg"alt="cluster0 image3">
+                <img src="sapporo photo/cluster_0_top10/13666950544.jpg"alt="cluster0 image4">
+                <img src="sapporo photo/cluster_0_top10/8460994696.jpg"alt="cluster0 image5">
+                <img src="sapporo photo/cluster_0_top10/3654989430.jpg"alt="cluster0 image6">
+            </div>
+            <div class="gallery" id="image-gallery-cluster4">
+                <img src="sapporo photo/cluster_4_top10/7990670127.jpg"alt="cluster4 image1">
+                <img src="sapporo photo/cluster_4_top10/6851310973.jpg"alt="cluster4 image2">
+                <img src="sapporo photo/cluster_4_top10/3654124093.jpg"alt="cluster4 image3">
+                <img src="sapporo photo/cluster_4_top10/4219736898.jpg"alt="cluster4 image4">
+                <img src="sapporo photo/cluster_4_top10/8337078588.jpg"alt="cluster4 image5">
+                <img src="sapporo photo/cluster_4_top10/2648349168.jpg"alt="cluster4 image6">
+                <img src="sapporo photo/cluster_4_top10/2182583088.jpg"alt="cluster4 image7">
+                <img src="sapporo photo/cluster_4_top10/8509171063.jpg"alt="cluster4 image8">
+                <img src="sapporo photo/cluster_4_top10/5402728632.jpg"alt="cluster4 image9">
+                <img src="sapporo photo/cluster_4_top10/526232037.jpg"alt="cluster4 image10">
+            </div>
+            <div class="gallery" id="image-gallery-cluster5">
+                <img src="sapporo photo/cluster_5_top10/9065881455.jpg"alt="cluster5 image1">
+                <img src="sapporo photo/cluster_5_top10/2737338933.jpg"alt="cluster5 image2">
+                <img src="sapporo photo/cluster_5_top10/7688094456.jpg"alt="cluster5 image3">
+                <img src="sapporo photo/cluster_5_top10/6960427565.jpg"alt="cluster5 image4">
+                <img src="sapporo photo/cluster_5_top10/7327516974.jpg"alt="cluster5 image5">
+                <img src="sapporo photo/cluster_5_top10/3213021070.jpg"alt="cluster5 image6">
+            </div>
+            <div class="gallery" id="image-gallery-cluster12">
+                <img src="sapporo photo/cluster_12_top10/6304319897.jpg"alt="cluster12 image1">
+                <img src="sapporo photo/cluster_12_top10/3709165368.jpg"alt="cluster12 image2">
+                <img src="sapporo photo/cluster_12_top10/8036268048.jpg"alt="cluster12 image3">
+                <img src="sapporo photo/cluster_12_top10/13666639443.jpg"alt="cluster12 image4">
+            </div>
+            <div class="gallery" id="image-gallery-cluster13">
+                <img src="sapporo photo/cluster_13_top10/4963296127.jpg"alt="cluster13 image1">
+                <img src="sapporo photo/cluster_13_top10/9068129748.jpg"alt="cluster13 image2">
+                <img src="sapporo photo/cluster_13_top10/2216068613.jpg"alt="cluster13 image3">
+                <img src="sapporo photo/cluster_13_top10/4574414922.jpg"alt="cluster13 image4">
+            </div>
+            <div class="gallery" id="image-gallery-cluster14">
+                <img src="sapporo photo/cluster_14_top10/7034546425.jpg"alt="cluster14 image1">
+                <img src="sapporo photo/cluster_14_top10/8820144166.jpg"alt="cluster14 image2">
+                <img src="sapporo photo/cluster_14_top10/9023136991.jpg"alt="cluster14 image3">
+                <img src="sapporo photo/cluster_14_top10/8517876875.jpg"alt="cluster14 image4">
+                <img src="sapporo photo/cluster_14_top10/10739257216.jpg"alt="cluster14 image5">
+                <img src="sapporo photo/cluster_14_top10/3654909054.jpg"alt="cluster14 image6">
+                <img src="sapporo photo/cluster_14_top10/4224453056.jpg"alt="cluster14 image7">
+                <img src="sapporo photo/cluster_14_top10/9068105798.jpg"alt="cluster14 image8">
+                <img src="sapporo photo/cluster_14_top10/4143507623.jpg"alt="cluster14 image9">
+                <img src="sapporo photo/cluster_14_top10/5448017205.jpg"alt="cluster14 image10">
+            </div>
+            <div class="gallery" id="image-gallery-cluster16">
+                <img src="sapporo photo/cluster_16_top10/6025449501.jpg"alt="cluster16 image1">
+                <img src="sapporo photo/cluster_16_top10/9025356826.jpg"alt="cluster16 image2">
+                <img src="sapporo photo/cluster_16_top10/9065880075.jpg"alt="cluster16 image3">
+                <img src="sapporo photo/cluster_16_top10/8443196979.jpg"alt="cluster16 image4">
+                <img src="sapporo photo/cluster_16_top10/5338748044.jpg"alt="cluster16 image5">
+                <img src="sapporo photo/cluster_16_top10/12746418465.jpg"alt="cluster16 image6">
+                <img src="sapporo photo/cluster_16_top10/6842804208.jpg"alt="cluster16 image7">
+                <img src="sapporo photo/cluster_16_top10/6814265333.jpg"alt="cluster16 image8">
+                <img src="sapporo photo/cluster_16_top10/2667170191.jpg"alt="cluster16 image9">
+                <img src="sapporo photo/cluster_16_top10/194087768.jpg"alt="cluster16 image10">
+            </div>
+            <div class="gallery" id="image-gallery-cluster18">
+                <img src="sapporo photo/cluster_18_top10/7974494376.jpg"alt="cluster18 image1">
+                <img src="sapporo photo/cluster_18_top10/6832591199.jpg"alt="cluster18 image2">
+                <img src="sapporo photo/cluster_18_top10/5448013897.jpg"alt="cluster18 image3">
+                <img src="sapporo photo/cluster_18_top10/2710180314.jpg"alt="cluster18 image4">
+                <img src="sapporo photo/cluster_18_top10/6174016261.jpg"alt="cluster18 image5">
+                <img src="sapporo photo/cluster_18_top10/408294012.jpg"alt="cluster18 image6">
+                <img src="sapporo photo/cluster_18_top10/10744714806.jpg"alt="cluster18 image7">
+                <img src="sapporo photo/cluster_18_top10/8460714662.jpg"alt="cluster18 image8">
+            </div>
+            <div class="gallery" id="image-gallery-cluster22">
+                <img src="sapporo photo/cluster_22_top10/7981275642.jpg"alt="cluster22 image1">
+                <img src="sapporo photo/cluster_22_top10/5455653878.jpg"alt="cluster22 image2">
+                <img src="sapporo photo/cluster_22_top10/13965133213.jpg"alt="cluster22 image3">
+                <img src="sapporo photo/cluster_22_top10/8005557691.jpg"alt="cluster22 image4">
+                <img src="sapporo photo/cluster_22_top10/4341671004.jpg"alt="cluster22 image5">
+                <img src="sapporo photo/cluster_22_top10/106806396.jpg"alt="cluster22 image6">
+                <img src="sapporo photo/cluster_22_top10/208223535.jpg"alt="cluster22 image7">
+                <img src="sapporo photo/cluster_22_top10/9121675025.jpg"alt="cluster22 image8">
+                <img src="sapporo photo/cluster_22_top10/2171310354.jpg"alt="cluster22 image9">
+                <img src="sapporo photo/cluster_22_top10/3806239342.jpg"alt="cluster22 image10">
+            </div>
+            <div class="gallery" id="image-gallery-cluster23">
+                <img src="sapporo photo/cluster_23_top10/4219869264.jpg"alt="cluster23 image1">
+                <img src="sapporo photo/cluster_23_top10/8036355023.jpg"alt="cluster23 image2">
+                <img src="sapporo photo/cluster_23_top10/7844877032.jpg"alt="cluster23 image3">
+                <img src="sapporo photo/cluster_23_top10/4414071056.jpg"alt="cluster23 image4">
+            </div>
+            <div class="gallery" id="image-gallery-cluster25">
+                <img src="sapporo photo/cluster_25_top10/3626362613.jpg"alt="cluster25 image1">
+                <img src="sapporo photo/cluster_25_top10/8471623616.jpg"alt="cluster25 image2">
+                <img src="sapporo photo/cluster_25_top10/6832629047.jpg"alt="cluster25 image3">
+                <img src="sapporo photo/cluster_25_top10/5448866863.jpg"alt="cluster25 image4">
+                <img src="sapporo photo/cluster_25_top10/8457315557.jpg"alt="cluster25 image5">
+                <img src="sapporo photo/cluster_25_top10/4745567669.jpg"alt="cluster25 image6">
+            </div>
+            <div class="gallery" id="image-gallery-cluster32">
+                <img src="sapporo photo/cluster_32_top10/9123911482.jpg"alt="cluster32 image1">
+                <img src="sapporo photo/cluster_32_top10/7990705527.jpg"alt="cluster32 image2">
+                <img src="sapporo photo/cluster_32_top10/6025965976.jpg"alt="cluster25 image3">
+                <img src="sapporo photo/cluster_32_top10/5211222774.jpg"alt="cluster25 image4">
+                <img src="sapporo photo/cluster_32_top10/4240937474.jpg"alt="cluster25 image5">
+                <img src="sapporo photo/cluster_32_top10/2223278318.jpg"alt="cluster25 image6">
+            </div>
+            <div class="gallery" id="image-gallery-cluster37">
+                <img src="sapporo photo/cluster_37_top10/3261378607.jpg"alt="cluster37 image1">
+                <img src="sapporo photo/cluster_37_top10/3206828700.jpg"alt="cluster37 image2">
+                <img src="sapporo photo/cluster_37_top10/13658227344.jpg"alt="cluster37 image3">
+                <img src="sapporo photo/cluster_37_top10/3149453808.jpg"alt="cluster37 image4">
+                <img src="sapporo photo/cluster_37_top10/3805437159.jpg"alt="cluster37 image5">
+                <img src="sapporo photo/cluster_37_top10/7844860784.jpg"alt="cluster37 image6">
+                <img src="sapporo photo/cluster_37_top10/6856240759.jpg"alt="cluster37 image7">
+                <img src="sapporo photo/cluster_37_top10/4333993143.jpg"alt="cluster37 image8">
+                <img src="sapporo photo/cluster_37_top10/4053386265.jpg"alt="cluster37 image9">
+                <img src="sapporo photo/cluster_37_top10/3847348215.jpg"alt="cluster37 image10">
+            </div>
+            <div class="gallery" id="image-gallery-cluster41">
+                <img src="sapporo photo/cluster_41_top10/5911237061.jpg"alt="cluster41 image1">
+                <img src="sapporo photo/cluster_41_top10/12746414925.jpg"alt="cluster41 image2">
+                <img src="sapporo photo/cluster_41_top10/9123940754.jpg"alt="cluster41 image3">
+                <img src="sapporo photo/cluster_41_top10/6888468626.jpg"alt="cluster41 image4">
+                <img src="sapporo photo/cluster_41_top10/2735442523.jpg"alt="cluster41 image5">
+                <img src="sapporo photo/cluster_41_top10/5338767696.jpg"alt="cluster41 image6">
+                <img src="sapporo photo/cluster_41_top10/36520844.jpg"alt="cluster41 image7">
+                <img src="sapporo photo/cluster_41_top10/13941985451.jpg"alt="cluster41 image8">
+                <img src="sapporo photo/cluster_41_top10/482266939.jpg"alt="cluster41 image9">
+                <img src="sapporo photo/cluster_41_top10/6799917052.jpg"alt="cluster41 image10">
+            </div>
+            <div class="gallery" id="image-gallery-cluster52">
+                <img src="sapporo photo/cluster_52_top10/4871277284.jpg"alt="cluster52 image1">
+                <img src="sapporo photo/cluster_52_top10/4629326447.jpg"alt="cluster52 image2">
+                <img src="sapporo photo/cluster_52_top10/6023383971.jpg"alt="cluster52 image3">
+                <img src="sapporo photo/cluster_52_top10/6851325827.jpg"alt="cluster52 image4">
+                <img src="sapporo photo/cluster_52_top10/9121697157.jpg"alt="cluster52 image5">
+                <img src="sapporo photo/cluster_52_top10/6122184209.jpg"alt="cluster52 image6">
+                <img src="sapporo photo/cluster_52_top10/6624483729.jpg"alt="cluster52 image7">
+                <img src="sapporo photo/cluster_52_top10/5890558306.jpg"alt="cluster52 image8">
+            </div>
+            <div class="gallery" id="image-gallery-cluster60">
+                <img src="sapporo photo/cluster_60_top10/4486293824.jpg"alt="cluster60 image1">
+                <img src="sapporo photo/cluster_60_top10/7683755412.jpg"alt="cluster60 image2">
+                <img src="sapporo photo/cluster_60_top10/3933766826.jpg"alt="cluster60 image3">
+                <img src="sapporo photo/cluster_60_top10/9121713577.jpg"alt="cluster60 image4">
+            </div>
+            <div class="gallery" id="image-gallery-cluster64">
+                <img src="sapporo photo/cluster_64_top10/7520225206.jpg"alt="cluster64 image1">
+                <img src="sapporo photo/cluster_64_top10/4456493099.jpg"alt="cluster64 image2">
+                <img src="sapporo photo/cluster_64_top10/9023139905.jpg"alt="cluster64 image3">
+                <img src="sapporo photo/cluster_64_top10/13965145943.jpg"alt="cluster64 image4">
+            </div>
+            <div class="gallery" id="image-gallery-cluster65">
+                <img src="sapporo photo/cluster_65_top10/8648095831.jpg"alt="cluster65 image1">
+                <img src="sapporo photo/cluster_65_top10/9228138608.jpg"alt="cluster65 image2">
+                <img src="sapporo photo/cluster_65_top10/12023086064.jpg"alt="cluster65 image3">
+                <img src="sapporo photo/cluster_65_top10/12746575753.jpg"alt="cluster65 image4">
+            </div>
+            <div class="gallery" id="image-gallery-cluster66">
+                <img src="sapporo photo/cluster_66_top10/6854645223.jpg"alt="cluster66 image1">
+                <img src="sapporo photo/cluster_66_top10/4144281836.jpg"alt="cluster66 image2">
+                <img src="sapporo photo/cluster_66_top10/5449476750.jpg"alt="cluster66 image3">
+                <img src="sapporo photo/cluster_66_top10/8470525831.jpg"alt="cluster66 image4">
+                <img src="sapporo photo/cluster_66_top10/107636996.jpg"alt="cluster66 image5">
+            </div>
+            <div class="gallery" id="image-gallery-cluster67">
+                <img src="sapporo photo/cluster_67_top10/8471619110.jpg"alt="cluster67 image1">
+                <img src="sapporo photo/cluster_67_top10/5449477830.jpg"alt="cluster67 image2">
+                <img src="sapporo photo/cluster_67_top10/8458392832.jpg"alt="cluster67 image3">
+                <img src="sapporo photo/cluster_67_top10/8475429637.jpg"alt="cluster67 image4">
+            </div>
+            <div class="gallery" id="image-gallery-cluster69">
+                <img src="sapporo photo/cluster_69_top10/9848237193.jpg"alt="cluster69 image1">
+                <img src="sapporo photo/cluster_69_top10/6052657415.jpg"alt="cluster69 image2">
+                <img src="sapporo photo/cluster_69_top10/7030812647.jpg"alt="cluster69 image3">
+                <img src="sapporo photo/cluster_69_top10/2598119338.jpg"alt="cluster69 image4">
+                <img src="sapporo photo/cluster_69_top10/3618687561.jpg"alt="cluster69 image5">
+                <img src="sapporo photo/cluster_69_top10/8444274534.jpg"alt="cluster69 image6">
+                <img src="sapporo photo/cluster_69_top10/9227778368.jpg"alt="cluster69 image7">
+            </div>
+            <div class="gallery" id="image-gallery-cluster72">
+                <img src="sapporo photo/cluster_72_top10/2163812936.jpg"alt="cluster72 image1">
+                <img src="sapporo photo/cluster_72_top10/9799293156.jpg"alt="cluster72 image2">
+                <img src="sapporo photo/cluster_72_top10/13658252004.jpg"alt="cluster72 image3">
+                <img src="sapporo photo/cluster_72_top10/6025378115.jpg"alt="cluster72 image4">
+                <img src="sapporo photo/cluster_72_top10/2667147657.jpg"alt="cluster72 image5">
+            </div>
+    </div>
+    <script src="sapporo2.js"></script>
+    </main>
+</body>
+</html>
