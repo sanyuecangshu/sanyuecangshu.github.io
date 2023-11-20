@@ -1,17 +1,34 @@
 header {
     border: 5px;
-    padding: 10px;
+    padding: 12px;
     color: black;
-    background-color: lightblue;
-    font-size: 15pt;
+    background-color: rgb(221, 221, 221);
+    font-size: 20pt;
     }
 main {font-size: 15pt;}
 .container{
+    display: flex;
     width: 200px;
     margin: 0 auto;
     white-space:nowrap;
+    font-size: 15pt;
+    justify-content: center;
+}
+.container .item {
+    margin: 10px;
+    padding: 20px 10px;
+}
+.container .n01 {
+    background-color: #ffbebe;
+}
+.container .n02 {
+    background-color: #cefcbb;
 }
 #menu{
     list-style-type: none;
+    padding: 10px;
+}
+h2 {
+    font-size: 15pt;
     padding: 10px;
 }
