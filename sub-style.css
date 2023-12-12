@@ -16,3 +16,14 @@
     flex-direction: row;
     flex-wrap:wrap;   
 }
+
+.col{
+    counter-increment: count;
+}
+.col:before{
+    position: absolute;
+    content: counter(count);
+    color: #fff;
+    background: #28a745;
+    padding: 5px;
+}
