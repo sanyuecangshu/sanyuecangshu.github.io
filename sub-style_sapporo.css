@@ -1,0 +1,29 @@
+#mapid {
+    height: 800px;
+}
+
+#image-gallery { 
+    width: 90%; 
+    margin: 0 auto;
+}
+
+.gallery img {
+    width: 200px; 
+    height: auto; 
+    justify-content:flex-start; 
+    margin-bottom: 10px;
+    margin-right: 10px;
+    flex-direction: row;
+    flex-wrap:wrap;   
+}
+
+.col{
+    counter-increment: count;
+}
+.col:before{
+    position: absolute;
+    content: counter(count);
+    color: #fff;
+    background: #007bff;
+    padding: 5px;
+}
