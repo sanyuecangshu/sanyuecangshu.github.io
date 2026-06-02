@@ -59,16 +59,23 @@ h3 {
     justify-content: center;
     margin: 24px auto;
     max-width: 96vw;
+    width: 96vw;
 }
 .map-gallery figure {
+    flex: 0 1 calc((96vw - 32px) / 3);
     margin: 0;
+    max-width: calc((96vw - 32px) / 3);
     text-align: center;
 }
 .map-gallery img {
     border: 1px solid #cccccc;
+    box-sizing: border-box;
     cursor: zoom-in;
+    display: block;
+    height: auto;
     max-height: 75vh;
-    max-width: 31vw;
+    max-width: 100%;
+    object-fit: contain;
     width: 100%;
 }
 .map-gallery figcaption {

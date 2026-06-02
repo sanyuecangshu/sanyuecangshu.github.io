@@ -1,10 +1,12 @@
 const lightbox = document.getElementById("map-lightbox");
+const zoomableImages = Array.from(document.querySelectorAll(".zoomable-map"));
+
+if (lightbox && zoomableImages.length > 0) {
 const lightboxImage = lightbox.querySelector(".lightbox-image");
 const lightboxLabel = lightbox.querySelector(".lightbox-label");
 const closeButton = lightbox.querySelector(".lightbox-close");
 const prevButton = lightbox.querySelector(".lightbox-prev");
 const nextButton = lightbox.querySelector(".lightbox-next");
-const zoomableImages = Array.from(document.querySelectorAll(".zoomable-map"));
 let currentImageIndex = 0;
 
 const showImage = (index) => {
@@ -36,11 +38,13 @@ zoomableImages.forEach((image, index) => {
     });
 });
 
-prevButton.addEventListener("click", () => {
+prevButton.addEventListener("click", (event) => {
+    event.stopPropagation();
     showImage(currentImageIndex - 1);
 });
 
-nextButton.addEventListener("click", () => {
+nextButton.addEventListener("click", (event) => {
+    event.stopPropagation();
     showImage(currentImageIndex + 1);
 });
 
@@ -65,3 +69,4 @@ document.addEventListener("keydown", (event) => {
         showImage(currentImageIndex + 1);
     }
 });
+}
