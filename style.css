@@ -27,6 +27,12 @@ main {font-size: 15pt;}
 .container .n03 {
     background-color: #c8e7ff;
 }
+.illustration-menu .n01 {
+    background-color: #c8e7ff;
+}
+.illustration-menu .n02 {
+    background-color: #fff4b8;
+}
 .menu{
     list-style-type: none;
     padding: 10px;
@@ -122,6 +128,12 @@ h3 {
     padding: 8px 12px;
     position: absolute;
     top: 0;
+}
+.lightbox.label-bottom-right .lightbox-label {
+    bottom: 0;
+    left: auto;
+    right: 0;
+    top: auto;
 }
 .lightbox-close {
     background-color: #ffffff;
