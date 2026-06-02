@@ -68,7 +68,10 @@ h3 {
     width: 96vw;
 }
 .map-gallery figure {
+    display: flex;
     flex: 0 1 calc((96vw - 32px) / 3);
+    flex-direction: column;
+    justify-content: flex-end;
     margin: 0;
     max-width: calc((96vw - 32px) / 3);
     text-align: center;
