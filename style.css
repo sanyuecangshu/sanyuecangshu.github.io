@@ -33,7 +33,8 @@ main {font-size: 15pt;}
 }
 .submenu {
     list-style-type: disc;
-    padding: 8px 0 0 24px;
+    list-style-position: inside;
+    padding: 8px 0 0 0;
 }
 .submenu li {
     padding: 3px 0;
