@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Fukuoka History &amp; Culture Map</title>
+<link rel="stylesheet" type="text/css" href="reset.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>福岡歴史文化マップ Fukuoka History &amp; Culture Map</h1>
+        </div>
+    </header>
+    <main>
+        <div class="map-gallery">
+            <figure>
+                <img class="zoomable-map" src="./images/illustration/fukuoka_culture_A.png" alt="Fukuoka History and Culture Map A">
+                <figcaption>Map A</figcaption>
+            </figure>
+            <figure>
+                <img class="zoomable-map" src="./images/illustration/fukuoka_culture_B.png" alt="Fukuoka History and Culture Map B">
+                <figcaption>Map B</figcaption>
+            </figure>
+            <figure>
+                <img class="zoomable-map" src="./images/illustration/fukuoka_culture_C.png" alt="Fukuoka History and Culture Map C">
+                <figcaption>Map C</figcaption>
+            </figure>
+        </div>
+        <p class="map-instruction">
+            マップをクリックすると拡大して詳細を確認できます。必要に応じて、ブラウザを全画面表示にしてご覧ください。<br>
+            Click a map to enlarge it and view the details. You may also use your browser’s full-screen mode if needed.
+        </p>
+    </main>
+    <div class="lightbox" id="map-lightbox" aria-hidden="true">
+        <button class="lightbox-close" type="button" aria-label="Close">&times;</button>
+        <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">&lt;</button>
+        <div class="lightbox-image-wrap">
+            <img class="lightbox-image" src="" alt="">
+            <div class="lightbox-label"></div>
+        </div>
+        <button class="lightbox-nav lightbox-next" type="button" aria-label="Next image">&gt;</button>
+    </div>
+    <script src="./map-lightbox.js"></script>
+</body>
+</html>

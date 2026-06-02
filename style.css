@@ -8,7 +8,7 @@ header {
 main {font-size: 15pt;}
 .container{
     display: flex;
-    width: 200px;
+    width: fit-content;
     margin: 0 auto;
     white-space:nowrap;
     font-size: 15pt;
@@ -24,11 +24,124 @@ main {font-size: 15pt;}
 .container .n02 {
     background-color: #cefcbb;
 }
-#menu{
+.container .n03 {
+    background-color: #c8e7ff;
+}
+.menu{
     list-style-type: none;
     padding: 10px;
 }
-h2 {
+.submenu {
+    list-style-type: disc;
+    padding: 8px 0 0 24px;
+}
+.submenu li {
+    padding: 3px 0;
+}
+.section-title {
+    margin: 28px auto 8px;
+    width: fit-content;
+    font-size: 18pt;
+    padding: 10px;
+}
+h3 {
     font-size: 15pt;
     padding: 10px;
+}
+.page-link {
+    margin: 24px auto;
+    width: fit-content;
+}
+.map-gallery {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin: 24px auto;
+    max-width: 96vw;
+}
+.map-gallery figure {
+    margin: 0;
+    text-align: center;
+}
+.map-gallery img {
+    border: 1px solid #cccccc;
+    cursor: zoom-in;
+    max-height: 75vh;
+    max-width: 31vw;
+    width: 100%;
+}
+.map-gallery figcaption {
+    font-size: 12pt;
+    padding: 8px 0;
+}
+.map-instruction {
+    font-size: 13pt;
+    line-height: 1.6;
+    margin: 18px auto 28px;
+    text-align: center;
+    width: fit-content;
+}
+.lightbox {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.82);
+    display: none;
+    inset: 0;
+    justify-content: center;
+    padding: 32px;
+    position: fixed;
+    z-index: 1000;
+}
+.lightbox.is-open {
+    display: flex;
+}
+.lightbox-image-wrap {
+    max-height: 92vh;
+    max-width: 92vw;
+    position: relative;
+}
+.lightbox-image {
+    background-color: #ffffff;
+    display: block;
+    max-height: 92vh;
+    max-width: 92vw;
+    object-fit: contain;
+}
+.lightbox-label {
+    background-color: rgba(255, 255, 255, 0.92);
+    color: #000000;
+    font-size: 16pt;
+    left: 0;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.lightbox-close {
+    background-color: #ffffff;
+    border: 0;
+    cursor: pointer;
+    font-size: 28pt;
+    line-height: 1;
+    padding: 4px 12px;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 1002;
+}
+.lightbox-nav {
+    background-color: rgba(255, 255, 255, 0.92);
+    border: 0;
+    cursor: pointer;
+    font-size: 34pt;
+    line-height: 1;
+    padding: 10px 16px;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1002;
+}
+.lightbox-prev {
+    left: 20px;
+}
+.lightbox-next {
+    right: 20px;
 }
