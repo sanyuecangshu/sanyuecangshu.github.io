@@ -37,6 +37,9 @@ main {font-size: 15pt;}
     list-style-type: none;
     padding: 10px;
 }
+.illustration-menu .menu > li + li {
+    margin-top: 12px;
+}
 .submenu {
     list-style-type: disc;
     list-style-position: inside;
