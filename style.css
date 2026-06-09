@@ -41,8 +41,7 @@ main {font-size: 15pt;}
     margin-top: 12px;
 }
 .submenu {
-    list-style-type: disc;
-    list-style-position: inside;
+    list-style-type: none;
     padding: 8px 0 0 0;
 }
 .submenu li {
